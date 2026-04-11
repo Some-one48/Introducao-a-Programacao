@@ -1,3 +1,12 @@
+/*
+ENUNCIADO:
+Faça um programa na linguagem C que receba como entrada 3 valores reais: o preço de 2 produtos e um valor de desconto. 
+O programa deve mostrar o valor final da compra (soma do valor dos 2 produtos, subtraindo o desconto).
+
+Exemplo: Se o usuário digitar os preços 10.50 e 5.00 e o desconto de 2.00, o programa deve mostrar o valor final 
+de 13.50 (10.50 + 5.00 - 2.00).
+*/
+
 #include <stdio.h>
 
 void header(){

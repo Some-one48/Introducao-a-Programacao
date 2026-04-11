@@ -1,3 +1,10 @@
+/*
+ENUNCIADO:
+Faça um programa na linguagem C que receba 3 valores inteiros, e mostre qual deles é o maior.
+
+Exemplo: Se o usuário digitar os valores 10, 20 e 15, o programa deve mostrar o valor 20 como sendo o maior.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -24,6 +31,7 @@ int main(){
 
     // Saída
     header();
+    
     printf("Dentre (%d, %d, %d), o maior eh ", valor1, valor2, valor3);
     if (valor1 > valor2 && valor1 > valor3){
         printf("%d\n", valor1);
