@@ -1,27 +1,49 @@
 #include <stdio.h>
 
-void welcome(){
-    printf("--------------------------\n");
-    printf("\tBem-vindo!\n");
-    printf("--------------------------\n\n");
+void header(){
+    printf("----------------------------\n");
+    printf("\tCaixa Rapido\n");
+    printf("----------------------------\n\n");
+}
+
+int verificacao(int preco){
+    if (preco < 0){
+        return 1; // 1 -> Erro
+    }
 }
 
 int main(){
     //Cabeçalho
-    welcome();
+    header();
 
     //Declaração de Variáveis
     float preco1, preco2, desconto;
+    
     //Leitura dos dados
-    printf("Digite o preco do primeiro produto: ");
+    printf("Digite o preco do 1o produto: ");
     scanf("%f", &preco1);
-    printf("Digite o preco do segundo produto: ");
-    scanf("%f", &preco2);
-    printf("Digite o valor do desconto: ");
-    scanf("%f", &desconto);
 
-    //Saída
-    printf("\nValor total da compra: %.2f\n", preco1+preco2-desconto);
+    if (verificacao(preco1) == 1){
+        printf("\nERRO: o valor do preco deve ser um numero natural (maior ou igual a 0)\n");
+    }else{
+        printf("Digite o preco do 2o produto: ");
+        scanf("%f", &preco2);
+        
+        if (verificacao(preco2) == 1){
+            printf("\nERRO: o valor do preco deve ser um numero natural (maior ou igual a 0)\n");
+        }else{
+            printf("Digite o valor do desconto: ");
+            scanf("%f", &desconto);
+
+            if (verificacao(desconto) == 1){
+                printf("\nERRO: o valor do desconto deve ser um numero natural (maior ou igual a 0)\n");
+            }else{
+
+                //Saída
+                printf("\nValor total da compra: %.2f\n", preco1+preco2-desconto);
+            }
+        }
+    }
 
     return 0;
 }
