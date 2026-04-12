@@ -16,8 +16,12 @@ void header(){
 }
 
 int verificacao(int preco){
-    if (preco < 0){
+    if (preco > 0){
+        return 2; // 2 -> Tudo certo
+    }else{
         return 1; // 1 -> Erro
+        /* Construido dessa forma para englobar corretamente ocasiões em que o usuário
+        digitar valores não numéricos */ 
     }
 }
 
@@ -32,19 +36,19 @@ int main(){
     printf("Digite o preco do 1o produto: ");
     scanf("%f", &preco1);
 
-    if (verificacao(preco1) == 1){
+    if (verificacao(preco1) != 2){
         printf("\nERRO: o valor do preco deve ser um numero natural (maior ou igual a 0)\n");
     }else{
         printf("Digite o preco do 2o produto: ");
         scanf("%f", &preco2);
         
-        if (verificacao(preco2) == 1){
+        if (verificacao(preco2) != 2){
             printf("\nERRO: o valor do preco deve ser um numero natural (maior ou igual a 0)\n");
         }else{
             printf("Digite o valor do desconto: ");
             scanf("%f", &desconto);
 
-            if (verificacao(desconto) == 1){
+            if (verificacao(desconto) != 2){
                 printf("\nERRO: o valor do desconto deve ser um numero natural (maior ou igual a 0)\n");
             }else{
 

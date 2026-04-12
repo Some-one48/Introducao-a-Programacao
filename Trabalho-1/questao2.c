@@ -34,6 +34,6 @@ int main(){
     }else if(alunos >= 30){
         printf("Show! Turma cheia!\n");
     }
-
+    
     return 0;
 }

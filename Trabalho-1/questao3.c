@@ -37,7 +37,7 @@ int main(){
         printf("%d\n", valor1);
     }else if (valor2 > valor1 && valor2 > valor3){
         printf("%d\n", valor2);
-    }else {
+    }else if (valor3 > valor1 && valor3 > valor2){
         printf("%d\n", valor3);
     }
 
