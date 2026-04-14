@@ -1,6 +1,6 @@
 /*
 ENUNCIADO:
-Faça um programa na linguagem C que receba como entrada um valor inteiro que representa a quantidade de alunos dentro 
+Faça um programa na linguagem C que receba como entrada um valor inteiro que representa a quantidade de alunos dentro
 de uma sala. O programa deve mostrar uma das mensagens abaixo:
 
     * Se o valor digitado for menor ou igual a 10, o programa deve mostrar a frase "Cade a turma?".
@@ -17,12 +17,13 @@ void header(){
 }
 
 int main(){
+    //Cabeçalho
+    header();
+
     //Variáveis
     int alunos;
 
-    header();
-    
-    //Leitura 
+    //Leitura
     printf("Quantos alunos ha na turma? ");
     scanf("%d", &alunos);
 
@@ -34,6 +35,6 @@ int main(){
     }else if(alunos >= 30){
         printf("Show! Turma cheia!\n");
     }
-    
+
     return 0;
 }
